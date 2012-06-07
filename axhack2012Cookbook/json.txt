@@ -1,0 +1,32 @@
+{
+dataitems:[
+location:[
+{
+"name": "startPoint",
+"value": 42.3,n 65
+},
+{
+"name": "endPoint",
+"value": 44.4, 71
+},
+{
+"name": "currentPoint",
+"value": 43, 68
+},
+]
+
+payload:[
+{
+"name": "initialWeight",
+"value": 800,
+},
+{
+"name": "currentWeight",
+"value": 600,
+},
+{
+"name": "initialWeight",
+"value": 800,
+},
+]
+}
