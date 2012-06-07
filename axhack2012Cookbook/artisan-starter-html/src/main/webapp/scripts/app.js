@@ -19,7 +19,8 @@ $("#btnlogin").live('click', function () {
                 }, function () {
                     alert("Error logging in.")
                 })
-                })
+                
+				})
 }
 //main function on loop of 3 seconds
 repeatFetchData = function()   {
@@ -30,7 +31,7 @@ repeatFetchData = function()   {
 fetchData = function(){
 //sets up the promises which returns a json output
  var promises = [
-             axeda.callScripto('GET', "jsonfilename", {model_name:model_name, serial_number:serial_number}, 2, function (json) {}, "yes")
+             axeda.callScripto('GET', "json", {model_name:model_name, serial_number:serial_number}, 2, function (json) {}, "yes")
          ]
           //when all promise calls have been completed runs the function
           $.when.apply(null, promises).then(function (json) {
@@ -38,7 +39,7 @@ fetchData = function(){
           json = jsonifyString(json)
           if(json != null){
           //retrieves all elements that match current
-                         arr = jsonPath(json, "$..current")[0]
+                         arr = jsonPath(json, "$..location")
                          console.log (arr)
                          }
                  })
