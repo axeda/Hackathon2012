@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        apc-metadata.xml
+ -->
+<apcmetadata>
+    <customobjects>
+        <customobject>
+            <name>JSONTemplateService</name>
+            <type>Action</type>
+            <sourcefile>Template\JSONTemplateService.groovy</sourcefile>
+            <params>
+                <param name="username" description="(REQUIRED) The name of the calling user"/>
+                <param name="info" description="(OPTIONAL) If 'true', return the debug info string which was constructed "/>
+                <param name="mock" description="(OPTIONAL) If 'true', return the configured mock response"/>
+                <param name="mockError" description="(OPTIONAL) If 'true', return the configured mockError response"/>
+            </params>
+        </customobject>
+    </customobjects>
+
+    <applications>
+        <application>
+            <description>Hello World HTML</description>
+            <applicationId>HellWorld</applicationId>
+            <indexFile>index.html</indexFile>
+            <!--<zipFile></zipFile>-->
+            <sourcePath>artisan-starter-html/src/main/webapp</sourcePath>
+        </application>
+    </applications>
+
+</apcmetadata>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.axeda.apps</groupId>
+    <artifactId>artisan-upload</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <url>http://www.axeda.com</url>
+    <name>Axeda Artisan Project</name>
+    <properties>
+
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.axeda.community</groupId>
+            <artifactId>artisan-installer</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <executions>
+                    <execution>
+                        <id>my-execution</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <mainClass>com.axeda.provisioner.InstallMain</mainClass>
+                    <arguments>
+                        <argument>-f</argument>
+                        <argument>artisan.properties</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+    <repositories>
+        <repository>
+            <id>axeda-community-repo</id>
+            <name>Axeda Community Repository</name>
+            <url>http://dev6.axeda.com/apps/axedacommunityrepo/</url>
+        </repository>
+    </repositories>
+
+</project>

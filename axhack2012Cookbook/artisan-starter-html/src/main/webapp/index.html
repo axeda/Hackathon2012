@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <link media="screen" href="styles/axeda.css" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <script src="scripts/json-path.js" type="text/javascript"></script>
+    <script src="scripts/axeda.js" type="text/javascript"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<center>
+    <H1>Hello World!</H1>
+</center>
+<br/>
+<div class="login">
+    <h3>Username</h3>
+    <input type='text' size=30 id='username' value='admin'/>
+
+    <h3>Password</h3>
+    <input type="password" size=30 class='logininput' id="password" value="admin1"/>
+    <br/>
+
+    <input type="button" id="btnlogin" value="Go"/>
+    <span id='loginwarn'></span>
+</div>
+
+
+
+<div id="content">
+
+
+</div>
+
+
+<script type="text/javascript">
+    $(window).load(function () {
+    window.top.scrollTo(0, 1);
+    init();
+
+    })
+</script>
+</body>
+</html>

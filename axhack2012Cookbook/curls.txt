@@ -1,0 +1,15 @@
+//
+// JSONTemplateService
+//
+
+// get Mock response
+curl -k "http://kholbrook-att.axeda.com/services/v1/rest/Scripto/execute/JSONTemplateService?username=admin&password=admin1&mock=1" -X POST -d "{\"request\":{\"criteria\":{\"pageSize\":10,\"pageNumber\":1},\"params\":{\"param1\": \"param 1 value\",\"param2\": \"param 2 value\"}}}" -H "Content-Type: application/json"
+
+// get Mock Error response
+curl -k "http://kholbrook-att.axeda.com/services/v1/rest/Scripto/execute/JSONTemplateService?username=admin&password=admin1&mockError=1" -X POST -d "{\"request\":{\"criteria\":{\"pageSize\":10,\"pageNumber\":1},\"params\":{\"param1\": \"param 1 value\",\"param2\": \"param 2 value\"}}}" -H "Content-Type: application/json"
+
+// get Real response
+curl -k "http://kholbrook-att.axeda.com/services/v1/rest/Scripto/execute/JSONTemplateService?username=admin&password=admin1" -X POST -d "{\"request\":{\"criteria\":{\"pageSize\":10,\"pageNumber\":1},\"params\":{\"param1\": \"param 1 value\",\"param2\": \"param 2 value\"}}}" -H "Content-Type: application/json"
+
+// get Real response with Info
+curl -k "http://kholbrook-att.axeda.com/services/v1/rest/Scripto/execute/JSONTemplateService?username=admin&password=admin1&info=1" -X POST -d "{\"request\":{\"criteria\":{\"pageSize\":10,\"pageNumber\":1},\"params\":{\"param1\": \"param 1 value\",\"param2\": \"param 2 value\"}}}" -H "Content-Type: application/json"

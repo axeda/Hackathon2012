@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+         xmlns:artifact="urn:maven.artifact.ant">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.axeda.apps</groupId>
+        <artifactId>artisan-project</artifactId>
+        <version>1.0</version>
+    </parent>
+    <groupId>com.axeda.apps</groupId>
+    <artifactId>artisan-starter-scripts</artifactId>
+    <packaging>jar</packaging>
+    <version>0.1-BETA</version>
+    <name>Axeda Artisan Starter Scripts</name>
+    <url>http://maven.apache.org</url>
+    <description>Stub project for developing and installing Scripto</description>
+    <dependencies>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- PROVIDED -->
+
+        <!-- AXEDA PLATFORM SDK -->
+        <dependency>
+          <groupId>com.axeda</groupId>
+          <artifactId>platform-sdk</artifactId>
+          <version>${platform-sdk-version}</version>
+        </dependency>
+
+        <dependency>
+          <groupId>com.axeda</groupId>
+          <artifactId>sdk-v2</artifactId>
+          <version>${sdk-v2-version}</version>
+        </dependency>
+
+
+        <!-- OTHER LIBRARIES AVAILABLE TO CUSTOM OBJECTS -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovy-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons-collections.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${commons-logging.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${commons-beanutils.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy.modules.http-builder</groupId>
+            <artifactId>http-builder</artifactId>
+            <version>${httpbuilder.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.groovy</groupId>
+                    <artifactId>groovy</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.3.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- FOR TESTING -->
+        <dependency>
+            <!-- test scope to resolve mock ServiceFactory in platform sdk -->
+            <groupId>org.springframework</groupId>
+            <artifactId>spring</artifactId>
+            <version>2.5.6</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <sourceDirectory>src/main/groovy</sourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <verbose>true</verbose>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <debug>true</debug>
+                    <meminitial>128m</meminitial>
+                    <maxmem>512m</maxmem>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            
+
+        </plugins>
+    </build>
+
+
+</project>
