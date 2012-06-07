@@ -22,11 +22,8 @@
             {
                 "name": "currentWeight",
                 "value": "600"
-            },
-            {
-                "name": "initialWeight",
-                "value": "800"
             }
+            
         ]
     }
 }
