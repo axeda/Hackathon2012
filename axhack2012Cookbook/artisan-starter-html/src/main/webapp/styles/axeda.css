@@ -1,6 +1,7 @@
 body{
-width:800px;
+width:500px;
 height:600px;
+font-size:24px;
 }
 
 #content{
@@ -15,14 +16,26 @@ top:0;
 left:0;
 width:65%;
 height:100%;
-background-color:blue;
 }
-
+#map
+{
+height:300px;
+width:200px;
+}
 #sidebar{
 position:absolute;
+float:right;
 top:0;
+margin-left:70%;
 right:0;
 width:35%;
 height:100%;
-background-color:red;
+}
+
+#payload{
+position:absolute;
+}
+
+.clear{
+clear: both;
 }
